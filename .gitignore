@@ -98,3 +98,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+./docs
+
+!./docs/dockerfile
+!./docs/Jenkinsfile
+!./docs/main.tf
+!./docs/readme.md
