@@ -56,8 +56,8 @@ resource "docker_container" "jenkins" {
     name = docker_network.jenkins.name
   }
   volumes {
-    volume_name = docker_volume.jenkins_home.name
-    container_path = "/var/jenkins_home"
+    host_path      = "/var/run/docker.sock"
+    container_path = "/var/run/docker.sock"
   }
   ports {
     internal = 8080
